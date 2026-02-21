@@ -12,8 +12,7 @@
   let Decimal = (function (global, factory) {
     return factory();
   })(this, function () {
-    "use strict";
-
+    
     function _classCallCheck(instance, Constructor) {
       if (!(instance instanceof Constructor)) {
         throw new TypeError("Cannot call a class as a function");
@@ -108,7 +107,7 @@
                 // This node is somewhere in the middle of the list, so there must be at
                 // least THREE items in the list, and this node's prev and next must be
                 // defined here.
-                node.prev.next = node.next; // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                node.prev.next = node.next;
 
                 node.next.prev = node.prev;
               }
@@ -163,10 +162,10 @@
               // so this.map.size is guaranteed to be >= 2,
               // so this.first and this.last must be different valid ListNodes,
               // and this.last.prev must also be a valid ListNode (possibly this.first).
-              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+             
               var last = this.last;
               this.map["delete"](last.key);
-              this.last = last.prev; // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              this.last = last.prev;
 
               this.last.next = undefined;
             }
@@ -226,9 +225,9 @@
     var critical_tetr_values = [
       [
         // Base 2 (using http://myweb.astate.edu/wpaulsen/tetcalc/tetcalc.html )
-        1, 1.0891180521811202527, 1.1789767925673958433, 1.2701455431742086633,
-        1.3632090180450091941, 1.4587818160364217007, 1.5575237916251418333,
-        1.6601571006859253673, 1.7674858188369780435, 1.8804192098842727359, 2,
+        1, 1.0891180521811203, 1.1789767925673959, 1.2701455431742087,
+        1.3632090180450092, 1.4587818160364217, 1.5575237916251419,
+        1.6601571006859254, 1.7674858188369780, 1.8804192098842727, 2,
       ],
       [
         // Base E (using http://myweb.astate.edu/wpaulsen/tetcalc/tetcalc.html )
@@ -7469,3 +7468,4 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
+
