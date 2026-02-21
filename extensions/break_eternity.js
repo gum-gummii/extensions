@@ -7467,4 +7467,3 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
-
