@@ -4366,7 +4366,7 @@
                 return Decimal.fromNumber(Math.atan(this.sign * this.mag));
               }
 
-              return Decimal.fromNumber(Math.atan(this.sign * 797693e308));
+              return Decimal.fromNumber(Math.atan(this.sign * 1.797693e308));
             },
             /**
              * Hyperbolic sine: sinh(X) = (e^x - e^-x)/2.
@@ -7467,3 +7467,4 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
+
