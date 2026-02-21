@@ -373,7 +373,7 @@
 
     var FC_NN = function FC_NN(sign, layer, mag) {
       return Decimal.fromComponents_noNormalize(sign, layer, mag);
-    }; // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    };
 
     var decimalPlaces = function decimalPlaces(value, places) {
       var len = places + 1;
@@ -433,9 +433,9 @@
       return Math.exp(l) / scal1;
     };
 
-    var _EXPN1 = 0.36787944117144232159553; // exp(-1)
+    var _EXPN1 = 0.3678794411714423; // exp(-1)
 
-    var OMEGA = 0.56714329040978387299997; // W(1, 0)
+    var OMEGA = 0.5671432904097838; // W(1, 0)
     //from https://math.stackexchange.com/a/465183
     // The evaluation can become inaccurate very close to the branch point
     // Evaluates W(x, 0) if principal is true, W(x, -1) if principal is false
@@ -6648,7 +6648,7 @@
     getInfo() {
       return {
         id: "BrkEtt",
-        name: "BreakEternity",
+        name: Scratch.translate("BreakEternity"),
         color1: "#3b00a8",
         color2: "#280074",
         color3: "#280074",
@@ -6716,37 +6716,37 @@
           {
             opcode: "eq",
             blockType: "Boolean",
-            text: "[N1] = [N2]",
+            text: Scratch.translate("[N1] = [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "neq",
             blockType: "Boolean",
-            text: "[N1] != [N2]",
+            text: Scratch.translate("[N1] != [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "lt",
             blockType: "Boolean",
-            text: "[N1] < [N2]",
+            text: Scratch.translate("[N1] < [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "lteq",
             blockType: "Boolean",
-            text: "[N1] <= [N2]",
+            text: Scratch.translate("[N1] <= [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "ht",
             blockType: "Boolean",
-            text: "[N1] > [N2]",
+            text: Scratch.translate("[N1] > [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "hteq",
             blockType: "Boolean",
-            text: "[N1] >= [N2]",
+            text: Scratch.translate("[N1] >= [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
@@ -6846,37 +6846,37 @@
           {
             opcode: "add",
             blockType: "reporter",
-            text: "[N1] + [N2]",
+            text: Scratch.translate("[N1] + [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "sub",
             blockType: "reporter",
-            text: "[N1] - [N2]",
+            text: Scratch.translate("[N1] - [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "mul",
             blockType: "reporter",
-            text: "[N1] * [N2]",
+            text: Scratch.translate("[N1] * [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "div",
             blockType: "reporter",
-            text: "[N1] / [N2]",
+            text: Scratch.translate("[N1] / [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "mod",
             blockType: "reporter",
-            text: "[N1] % [N2]",
+            text: Scratch.translate("[N1] % [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "pow",
             blockType: "reporter",
-            text: "[N1] ^ [N2]",
+            text: Scratch.translate("[N1] ^ [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
@@ -6895,13 +6895,13 @@
           {
             opcode: "tetrate",
             blockType: "reporter",
-            text: "[N1] ^^ [N2]",
+            text: Scratch.translate("[N1] ^^ [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
             opcode: "pentate",
             blockType: "reporter",
-            text: "[N1] ^^^ [N2]",
+            text: Scratch.translate("[N1] ^^^ [N2]"),
             arguments: { N1: { type: "string" }, N2: { type: "string" } },
           },
           {
@@ -7467,3 +7467,4 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
+
