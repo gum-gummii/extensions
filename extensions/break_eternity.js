@@ -6635,7 +6635,7 @@
     FC = Decimal.fromComponents;
     FC_NN = Decimal.fromComponents_noNormalize;
 
-    Decimal.fromMantissaExponent; 
+    Decimal.fromMantissaExponent;
 
     Decimal.fromMantissaExponent_noNormalize;
 
@@ -7467,4 +7467,3 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
-
