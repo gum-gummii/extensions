@@ -2992,8 +2992,8 @@
                 var this_num = this.toNumber(); //within the convergence range?
 
                 if (
-                  this_num <= 1.44466786100976613366 &&
-                  this_num >= 0.06598803584531253708
+                  this_num <= 1.4446678610097661 &&
+                  this_num >= 0.06598803584531253
                 ) {
                   var negln = Decimal.ln(this).neg(); //For bases above 1, b^x = x has two solutions. The lower solution is a stable equilibrium, the upper solution is an unstable equilibrium.
 
@@ -3010,7 +3010,7 @@
                   if (payload.eq(upper)) return upper;
                   else if (payload.lt(upper)) return lower;
                   else return new Decimal(Decimal.dInf);
-                } else if (this_num > 1.44466786100976613366) {
+                } else if (this_num > 1.4446678610097661) {
                   //explodes to infinity
                   return new Decimal(Decimal.dInf);
                 } else {
@@ -3043,7 +3043,7 @@
               if (
                 this.gt(Decimal.dZero) &&
                 (this.lt(1) ||
-                  (this.lte(1.44466786100976613366) &&
+                  (this.lte(1.4446678610097661) &&
                     payload.lte(
                       Decimal.ln(this)
                         .neg()
@@ -3326,7 +3326,7 @@
                 return FC_NN(-1, 0, 1);
               }
 
-              if (base.lt(1.44466786100976613366)) {
+              if (base.lt(1.4446678610097661)) {
                 var negln = Decimal.ln(base).neg();
                 var infTower = negln.lambertw().div(negln);
                 if (this.eq(infTower)) return new Decimal(Decimal.dInf);
@@ -3471,7 +3471,7 @@
                   : false;
               var baseD = D(base);
 
-              if (baseD.gt(1) && baseD.lte(1.44466786100976613366)) {
+              if (baseD.gt(1) && baseD.lte(1.4446678610097661)) {
                 var excessSlog = Decimal.excess_slog(this, base, linear);
 
                 var _slogthis = excessSlog[0].toNumber();
@@ -4366,7 +4366,7 @@
                 return Decimal.fromNumber(Math.atan(this.sign * this.mag));
               }
 
-              return Decimal.fromNumber(Math.atan(this.sign * 1.8e308));
+              return Decimal.fromNumber(Math.atan(this.sign * 797693e308));
             },
             /**
              * Hyperbolic sine: sinh(X) = (e^x - e^-x)/2.
@@ -6027,7 +6027,7 @@
               var baseD = base;
               base = base.toNumber();
               if (base == 1 || base <= 0) return [new Decimal(Decimal.dNaN), 0];
-              if (base > 1.44466786100976613366)
+              if (base > 1.4446678610097661)
                 return [value.slog(base, 100, linear), 0];
               var negln = Decimal.ln(base).neg();
               var lower = negln.lambertw().div(negln);
@@ -6633,9 +6633,9 @@
 
     D = Decimal.fromValue_noAlloc;
     FC = Decimal.fromComponents;
-    FC_NN = Decimal.fromComponents_noNormalize; // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    FC_NN = Decimal.fromComponents_noNormalize;
 
-    Decimal.fromMantissaExponent; // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    Decimal.fromMantissaExponent; 
 
     Decimal.fromMantissaExponent_noNormalize;
 
@@ -7467,3 +7467,4 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
+
