@@ -12,7 +12,6 @@
   let Decimal = (function (global, factory) {
     return factory();
   })(this, function () {
-    
     function _classCallCheck(instance, Constructor) {
       if (!(instance instanceof Constructor)) {
         throw new TypeError("Cannot call a class as a function");
@@ -162,7 +161,7 @@
               // so this.map.size is guaranteed to be >= 2,
               // so this.first and this.last must be different valid ListNodes,
               // and this.last.prev must also be a valid ListNode (possibly this.first).
-             
+
               var last = this.last;
               this.map["delete"](last.key);
               this.last = last.prev;
@@ -227,7 +226,7 @@
         // Base 2 (using http://myweb.astate.edu/wpaulsen/tetcalc/tetcalc.html )
         1, 1.0891180521811203, 1.178976792567395, 1.270145543174208,
         1.3632090180450092, 1.4587818160364217, 1.5575237916251419,
-        1.660157100685925, 1.7674858188369780, 1.8804192098842727, 2,
+        1.660157100685925, 1.767485818836978, 1.8804192098842727, 2,
       ],
       [
         // Base E (using http://myweb.astate.edu/wpaulsen/tetcalc/tetcalc.html )
@@ -245,9 +244,9 @@
       ],
       [
         // Base 3
-        1, 1.1187738849694, 1.2464963939368, 1.38527004706,
-        1.5376664685821, 1.7068895236552, 1.897001227148,
-        2.1132403089001, 2.362480153784, 2.6539010333871, 3,
+        1, 1.1187738849694, 1.2464963939368, 1.38527004706, 1.5376664685821,
+        1.7068895236552, 1.897001227148, 2.1132403089001, 2.362480153784,
+        2.6539010333871, 3,
       ],
       [
         // Base 4
@@ -7468,6 +7467,3 @@
 
   Scratch.extensions.register(new BrEt());
 })(Scratch);
-
-
-
