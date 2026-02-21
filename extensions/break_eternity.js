@@ -5,17 +5,12 @@
 // Original: Patashu (github)
 // License: MPL-2.0
 
-//!format
 
 (function (Scratch) {
     'use strict';
 
-    
     //paste the decimal script in here and make sure to make the function return factory() at the end
 let Decimal = (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Decimal = factory());
   return factory()
 })(this, (function () { 'use strict';
 
@@ -107,14 +102,12 @@ let Decimal = (function (global, factory) {
             // so node - which is the original "last node" - must have a defined
             // previous node. Therefore, this.last - set above - must be defined
             // here.
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 
             this.last.next = undefined;
           } else {
             // This node is somewhere in the middle of the list, so there must be at
             // least THREE items in the list, and this node's prev and next must be
             // defined here.
-            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             node.prev.next = node.next; // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 
             node.next.prev = node.prev;
@@ -122,7 +115,6 @@ let Decimal = (function (global, factory) {
 
           node.next = this.first; // From the invariants, there must be at least two items in the cache, so
           // this.first must be a valid ListNode.
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 
           this.first.prev = node;
           this.first = node;
@@ -6157,4 +6149,5 @@ let Decimal = (function (global, factory) {
 }
 
     Scratch.extensions.register(new BrEt())
+
 })(Scratch)
